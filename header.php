@@ -12,7 +12,7 @@
 
 <?php wp_head(); ?>
 </head>
-<body class="home">
+<body <?php body_class(); ?>>
 <div id="wrap">
   <section id="description">
     <h1><?php bloginfo('description'); ?></h1>
@@ -56,7 +56,14 @@
         <li id="menu-item-inquiry" class="menu-item"><a href="#">お問い合わせ</a></li>
       </ul><!-- #menu-global end -->
     </nav><!-- #global-nav end -->
+
+    <?php
+        if(is_front_page()):
+    ?>
     <section id="branding">
       <img src="<?php header_image(); ?>" width="<?php echo get_custom_header() ->width;?>" height="<?php header_image(); ?>" width="<?php echo get_custom_header() ->height;?>" alt="" />
     </section><!-- #branding end -->
+    <?php
+        endif;
+    ?>
  
