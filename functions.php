@@ -10,3 +10,11 @@ add_theme_support(
       
     )
 );
+
+//custom menu
+register_nav_menus(
+    array(
+        'place_global' => 'Global',
+        'place_utility' => 'Utility'
+    )
+);
